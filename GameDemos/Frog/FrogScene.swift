@@ -18,6 +18,10 @@ class FrogScene: SKScene {
                    Frog(kind: Kind.red, name: "red1"),
                    Frog(kind: Kind.red, name: "red2"),
                    Frog(kind: Kind.red, name: "red3")]
+    var playable = true
+    var reset: SKLabelNode!
+    var menu: SKLabelNode!
+    var victory: SKLabelNode!
     
     override func didMove(to view: SKView) {
         distanceBetweenLeaf = self.size.width/8
@@ -28,7 +32,7 @@ class FrogScene: SKScene {
             leaves.append(leaf)
             addChild(leaf)
             
-            let frog: Frog = frogs[i]
+            let frog = frogs[i]
             if frog.kind != .none {
                 let frogSprite: SKSpriteNode
                 if frog.kind == .green {
@@ -42,10 +46,30 @@ class FrogScene: SKScene {
                 addChild(frogSprite)
             }
         }
+        
+        reset = childNode(withName: "reset") as! SKLabelNode
+        menu = childNode(withName: "menu") as! SKLabelNode
+        victory = childNode(withName: "victory") as! SKLabelNode
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else {
+            return
+        }
+        
+        if menu.frame.contains(touch.location(in: self)) {
+            let menuScene = SKScene(fileNamed: "MenuScene")!
+            menuScene.scaleMode = self.scaleMode
+            view?.presentScene(menuScene)
+        }
+        
+        if reset.frame.contains(touch.location(in: self)) {
+            let frogScene = SKScene(fileNamed: "FrogScene")!
+            frogScene.scaleMode = self.scaleMode
+            view?.presentScene(frogScene)
+        }
+        
+        if !playable {
             return
         }
         
@@ -57,7 +81,7 @@ class FrogScene: SKScene {
     }
     
     private func moveFrog(i: Int) {
-        let frog: Frog = frogs[i]
+        let frog = frogs[i]
         switch frog.kind {
         case .none:
             return
@@ -65,11 +89,13 @@ class FrogScene: SKScene {
             if i + 1 > 6 {
                 return
             }else if frogs[i+1].kind == .none {
-                //jump1
+                frogs.swapAt(i, i+1)
+                jump(frogName: frog.name, step: 1)
             } else if i + 2 > 6 {
                 return
             } else if frogs[i+2].kind == .none {
-                //jump2
+                frogs.swapAt(i, i+2)
+                jump(frogName: frog.name, step: 2)
             } else {
                 return
             }
@@ -77,17 +103,50 @@ class FrogScene: SKScene {
             if i - 1 < 0 {
                 return
             }else if frogs[i-1].kind == .none {
-                //jump1
+                frogs.swapAt(i, i-1)
+                jump(frogName: frog.name, step: -1)
             } else if i - 2 < 0 {
                 return
             } else if frogs[i-2].kind == .none {
-                //jump2
+                frogs.swapAt(i, i-2)
+                jump(frogName: frog.name, step: -2)
             } else {
                 return
             }
         }
         
         //judge is won
+        if isWon() {
+            victory.isHidden = false
+            playable = false
+        }
+    }
+    
+    private func jump(frogName: String, step: CGFloat) {
+        guard let frog = childNode(withName: frogName) else {
+            return
+        }
+        
+        frog.run(SKAction.sequence([
+            SKAction.move(by: CGVector(dx: distanceBetweenLeaf * step / 2 , dy: frog.frame.height), duration: 0.25),
+            SKAction.move(by: CGVector(dx: distanceBetweenLeaf * step / 2 , dy: -frog.frame.height), duration: 0.25)
+        ]))
+    }
+    
+    private func isWon() -> Bool {
+        for i in 0...2 {
+            if frogs[i].kind != .red {
+                return false
+            }
+        }
+        
+        for i in 4...6 {
+            if frogs[i].kind != .green {
+                return false
+            }
+        }
+        
+        return true
     }
 }
 
