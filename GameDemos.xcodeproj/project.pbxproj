@@ -16,6 +16,8 @@
 		22504E62213959060025CC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22504E60213959060025CC8E /* LaunchScreen.storyboard */; };
 		22504E6C213963CA0025CC8E /* FrogScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22504E6B213963CA0025CC8E /* FrogScene.sks */; };
 		22651AE321396BF600E809A1 /* FrogScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22651AE221396BF600E809A1 /* FrogScene.swift */; };
+		22FB3D0F218B446B00D0B829 /* ButtonPressedDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB3D0E218B446B00D0B829 /* ButtonPressedDelegate.swift */; };
+		22FB3D11218B44CD00D0B829 /* SKLabelButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FB3D10218B44CD00D0B829 /* SKLabelButtonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		22504E63213959060025CC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22504E6B213963CA0025CC8E /* FrogScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FrogScene.sks; sourceTree = "<group>"; };
 		22651AE221396BF600E809A1 /* FrogScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogScene.swift; sourceTree = "<group>"; };
+		22FB3D0E218B446B00D0B829 /* ButtonPressedDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressedDelegate.swift; sourceTree = "<group>"; };
+		22FB3D10218B44CD00D0B829 /* SKLabelButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLabelButtonNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				22651AE52139718300E809A1 /* Frog */,
 				22504E51213959040025CC8E /* AppDelegate.swift */,
 				22504E59213959040025CC8E /* GameViewController.swift */,
+				22FB3D0E218B446B00D0B829 /* ButtonPressedDelegate.swift */,
+				22FB3D10218B44CD00D0B829 /* SKLabelButtonNode.swift */,
 				22504E5B213959040025CC8E /* Main.storyboard */,
 				22504E5E213959060025CC8E /* Assets.xcassets */,
 				22504E60213959060025CC8E /* LaunchScreen.storyboard */,
@@ -127,6 +133,7 @@
 				TargetAttributes = {
 					22504E4D213959040025CC8E = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -170,7 +177,9 @@
 			files = (
 				22504E58213959040025CC8E /* MenuScene.swift in Sources */,
 				22504E5A213959040025CC8E /* GameViewController.swift in Sources */,
+				22FB3D0F218B446B00D0B829 /* ButtonPressedDelegate.swift in Sources */,
 				22651AE321396BF600E809A1 /* FrogScene.swift in Sources */,
+				22FB3D11218B44CD00D0B829 /* SKLabelButtonNode.swift in Sources */,
 				22504E52213959040025CC8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +333,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.GameDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -342,7 +351,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.GameDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -47,9 +47,9 @@ class FrogScene: SKScene {
             }
         }
         
-        reset = childNode(withName: "reset") as! SKLabelNode
-        menu = childNode(withName: "menu") as! SKLabelNode
-        victory = childNode(withName: "victory") as! SKLabelNode
+        reset = (childNode(withName: "reset") as! SKLabelNode)
+        menu = (childNode(withName: "menu") as! SKLabelNode)
+        victory = (childNode(withName: "victory") as! SKLabelNode)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
