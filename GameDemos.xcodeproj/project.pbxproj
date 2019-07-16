@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2203A35522DE09E90051930F /* PuzzleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2203A35422DE09E90051930F /* PuzzleScene.sks */; };
+		2203A35722DE0A400051930F /* PuzzleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35622DE0A400051930F /* PuzzleScene.swift */; };
+		2203A35922DE0AA80051930F /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35822DE0AA80051930F /* Tile.swift */; };
 		22504E52213959040025CC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E51213959040025CC8E /* AppDelegate.swift */; };
 		22504E54213959040025CC8E /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22504E53213959040025CC8E /* MenuScene.sks */; };
 		22504E58213959040025CC8E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E57213959040025CC8E /* MenuScene.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2203A35422DE09E90051930F /* PuzzleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PuzzleScene.sks; sourceTree = "<group>"; };
+		2203A35622DE0A400051930F /* PuzzleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleScene.swift; sourceTree = "<group>"; };
+		2203A35822DE0AA80051930F /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		22504E4E213959040025CC8E /* GameDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22504E51213959040025CC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22504E53213959040025CC8E /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
@@ -47,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2203A35122DDFA390051930F /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				2203A35422DE09E90051930F /* PuzzleScene.sks */,
+				2203A35622DE0A400051930F /* PuzzleScene.swift */,
+				2203A35822DE0AA80051930F /* Tile.swift */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
 		22504E45213959040025CC8E = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +84,7 @@
 			children = (
 				22651AE42139717400E809A1 /* Menu */,
 				22651AE52139718300E809A1 /* Frog */,
+				2203A35122DDFA390051930F /* Puzzle */,
 				22504E51213959040025CC8E /* AppDelegate.swift */,
 				22504E59213959040025CC8E /* GameViewController.swift */,
 				22FB3D0E218B446B00D0B829 /* ButtonPressedDelegate.swift */,
@@ -133,7 +150,7 @@
 				TargetAttributes = {
 					22504E4D213959040025CC8E = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -160,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2203A35522DE09E90051930F /* PuzzleScene.sks in Resources */,
 				22504E6C213963CA0025CC8E /* FrogScene.sks in Resources */,
 				22504E5D213959040025CC8E /* Main.storyboard in Resources */,
 				22504E54213959040025CC8E /* MenuScene.sks in Resources */,
@@ -176,9 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22504E58213959040025CC8E /* MenuScene.swift in Sources */,
+				2203A35922DE0AA80051930F /* Tile.swift in Sources */,
 				22504E5A213959040025CC8E /* GameViewController.swift in Sources */,
 				22FB3D0F218B446B00D0B829 /* ButtonPressedDelegate.swift in Sources */,
 				22651AE321396BF600E809A1 /* FrogScene.swift in Sources */,
+				2203A35722DE0A400051930F /* PuzzleScene.swift in Sources */,
 				22FB3D11218B44CD00D0B829 /* SKLabelButtonNode.swift in Sources */,
 				22504E52213959040025CC8E /* AppDelegate.swift in Sources */,
 			);
@@ -333,7 +353,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.GameDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -351,7 +371,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxy.GameDemos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

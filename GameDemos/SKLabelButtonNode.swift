@@ -32,11 +32,6 @@ class SKLabelButtonNode: SKLabelNode {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         fontColor = normalColor
-        if let touch = touches.first {
-            let location = touch.location(in: self)
-            if self.frame.contains(location) {
-                buttonPressedDelegate.buttonPressed(buttonId: buttonId)
-            }
-        }
+        buttonPressedDelegate.buttonPressed(buttonId: buttonId)
     }
 }

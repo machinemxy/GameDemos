@@ -66,7 +66,8 @@ class FrogScene: SKScene {
         if reset.frame.contains(touch.location(in: self)) {
             let frogScene = SKScene(fileNamed: "FrogScene")!
             frogScene.scaleMode = self.scaleMode
-            view?.presentScene(frogScene)
+            let transition = SKTransition.doorsCloseHorizontal(withDuration: 0.5)
+            view?.presentScene(frogScene, transition: transition)
         }
         
         if !playable {
