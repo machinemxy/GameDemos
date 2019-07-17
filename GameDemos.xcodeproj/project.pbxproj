@@ -10,6 +10,7 @@
 		2203A35522DE09E90051930F /* PuzzleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2203A35422DE09E90051930F /* PuzzleScene.sks */; };
 		2203A35722DE0A400051930F /* PuzzleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35622DE0A400051930F /* PuzzleScene.swift */; };
 		2203A35922DE0AA80051930F /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35822DE0AA80051930F /* Tile.swift */; };
+		2203A35B22DF63F20051930F /* KillStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35A22DF63F20051930F /* KillStatus.swift */; };
 		22504E52213959040025CC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E51213959040025CC8E /* AppDelegate.swift */; };
 		22504E54213959040025CC8E /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22504E53213959040025CC8E /* MenuScene.sks */; };
 		22504E58213959040025CC8E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E57213959040025CC8E /* MenuScene.swift */; };
@@ -27,6 +28,7 @@
 		2203A35422DE09E90051930F /* PuzzleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PuzzleScene.sks; sourceTree = "<group>"; };
 		2203A35622DE0A400051930F /* PuzzleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleScene.swift; sourceTree = "<group>"; };
 		2203A35822DE0AA80051930F /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		2203A35A22DF63F20051930F /* KillStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillStatus.swift; sourceTree = "<group>"; };
 		22504E4E213959040025CC8E /* GameDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22504E51213959040025CC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22504E53213959040025CC8E /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2203A35422DE09E90051930F /* PuzzleScene.sks */,
 				2203A35622DE0A400051930F /* PuzzleScene.swift */,
 				2203A35822DE0AA80051930F /* Tile.swift */,
+				2203A35A22DF63F20051930F /* KillStatus.swift */,
 			);
 			path = Puzzle;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				22651AE321396BF600E809A1 /* FrogScene.swift in Sources */,
 				2203A35722DE0A400051930F /* PuzzleScene.swift in Sources */,
 				22FB3D11218B44CD00D0B829 /* SKLabelButtonNode.swift in Sources */,
+				2203A35B22DF63F20051930F /* KillStatus.swift in Sources */,
 				22504E52213959040025CC8E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

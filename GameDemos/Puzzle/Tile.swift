@@ -9,11 +9,20 @@
 import SpriteKit
 
 class Tile: SKSpriteNode {
-    init(x: Int, y: Int, colorId: Int) {
+    var x = 0
+    var y = 0
+    var colorId = 0
+    var killStatus = KillStatus.notKill
+    
+    init(x: Int, y: Int) {
+        self.x = x
+        self.y = y
+        self.colorId = Int.random(in: 0...4)
+        
         super.init(texture: nil, color: Tile.getColor(colorId: colorId), size: CGSize(width: 75, height: 75))
         self.position.x = CGFloat(150 + x * 100)
-        self.position.y = CGFloat(200 - y * 100)
-        self.name = "\(colorId)"
+        self.position.y = CGFloat(-200 + y * 100)
+        self.zPosition = 10
     }
     
     required init?(coder aDecoder: NSCoder) {
