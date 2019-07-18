@@ -20,8 +20,8 @@ class Tile: SKSpriteNode {
         self.colorId = Int.random(in: 0...4)
         
         super.init(texture: nil, color: Tile.getColor(colorId: colorId), size: CGSize(width: 75, height: 75))
-        self.position.x = CGFloat(150 + x * 100)
-        self.position.y = CGFloat(-200 + y * 100)
+        self.position.x = PuzzleHelper.getPosition(x: x)
+        self.position.y = PuzzleHelper.getPosition(y: y)
         self.zPosition = 10
     }
     

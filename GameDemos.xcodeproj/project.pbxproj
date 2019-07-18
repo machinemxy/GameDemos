@@ -11,6 +11,8 @@
 		2203A35722DE0A400051930F /* PuzzleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35622DE0A400051930F /* PuzzleScene.swift */; };
 		2203A35922DE0AA80051930F /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35822DE0AA80051930F /* Tile.swift */; };
 		2203A35B22DF63F20051930F /* KillStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2203A35A22DF63F20051930F /* KillStatus.swift */; };
+		2246FA3C22E0A86D003D8653 /* BeskKill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246FA3B22E0A86D003D8653 /* BeskKill.swift */; };
+		2246FA3E22E0B356003D8653 /* PuzzleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246FA3D22E0B356003D8653 /* PuzzleHelper.swift */; };
 		22504E52213959040025CC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E51213959040025CC8E /* AppDelegate.swift */; };
 		22504E54213959040025CC8E /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 22504E53213959040025CC8E /* MenuScene.sks */; };
 		22504E58213959040025CC8E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22504E57213959040025CC8E /* MenuScene.swift */; };
@@ -29,6 +31,8 @@
 		2203A35622DE0A400051930F /* PuzzleScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleScene.swift; sourceTree = "<group>"; };
 		2203A35822DE0AA80051930F /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		2203A35A22DF63F20051930F /* KillStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillStatus.swift; sourceTree = "<group>"; };
+		2246FA3B22E0A86D003D8653 /* BeskKill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeskKill.swift; sourceTree = "<group>"; };
+		2246FA3D22E0B356003D8653 /* PuzzleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleHelper.swift; sourceTree = "<group>"; };
 		22504E4E213959040025CC8E /* GameDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22504E51213959040025CC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22504E53213959040025CC8E /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				2203A35622DE0A400051930F /* PuzzleScene.swift */,
 				2203A35822DE0AA80051930F /* Tile.swift */,
 				2203A35A22DF63F20051930F /* KillStatus.swift */,
+				2246FA3B22E0A86D003D8653 /* BeskKill.swift */,
+				2246FA3D22E0B356003D8653 /* PuzzleHelper.swift */,
 			);
 			path = Puzzle;
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2246FA3E22E0B356003D8653 /* PuzzleHelper.swift in Sources */,
+				2246FA3C22E0A86D003D8653 /* BeskKill.swift in Sources */,
 				22504E58213959040025CC8E /* MenuScene.swift in Sources */,
 				2203A35922DE0AA80051930F /* Tile.swift in Sources */,
 				22504E5A213959040025CC8E /* GameViewController.swift in Sources */,
