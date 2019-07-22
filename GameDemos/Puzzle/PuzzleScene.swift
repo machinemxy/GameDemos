@@ -12,6 +12,7 @@ class PuzzleScene: SKScene {
     let n = 5
     var matrix = [[Tile?]]()
     var swipable = false
+    var timer: Timer!
     
     override func didMove(to view: SKView) {
         for y in 0..<n*2 {
@@ -24,13 +25,27 @@ class PuzzleScene: SKScene {
             matrix.append(row)
         }
         
-        while true {
-            let bestKill = kill()
-            if bestKill.killCount == 0 {
-                break
-            }
-            dropDown()
+        performKillAndDropUntilNothingCanBeKilled()
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        
+    }
+    
+    func performKillAndDropUntilNothingCanBeKilled() {
+        swipable = false
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (_) in
+            self.performKillAndDrop()
+        })
+    }
+    
+    func performKillAndDrop() {
+        let bestKill = kill()
+        if bestKill.killCount == 0 {
+            timer.invalidate()
+            swipable = true
         }
+        dropDown()
     }
     
     func kill() -> BestKill {
@@ -103,7 +118,7 @@ class PuzzleScene: SKScene {
                 }
                 matrix[y][x] = nil
                 tile.run(SKAction.sequence([
-                    SKAction.resize(toWidth: 0, height: 0, duration: 0.5),
+                    SKAction.resize(toWidth: 0, height: 0, duration: 0.25),
                     SKAction.removeFromParent()
                 ]))
             }
@@ -133,8 +148,8 @@ class PuzzleScene: SKScene {
                         bottom = wrappedBottom + 1
                         
                         tile.run(SKAction.sequence([
-                            SKAction.wait(forDuration: 0.5),
-                            SKAction.moveTo(y: PuzzleHelper.getPosition(y: wrappedBottom), duration: 0.5)
+                            SKAction.wait(forDuration: 0.25),
+                            SKAction.moveTo(y: PuzzleHelper.getPosition(y: wrappedBottom), duration: 0.25)
                         ]))
                     }
                 } else {
